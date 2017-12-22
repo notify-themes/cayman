@@ -26,10 +26,10 @@
       {{ content }}
       {% if page.notify_email %}
       <h3>Contact us</h3>
-          <form action="https://formrelay.notify.ma/mailer/{{ page.notify_email }}/" method="POST">
-                <input style="margin:3px;width:200px" type="text" name="fullname" placeholder="Name" required=""><br>
-                <input style="margin:3px;width:200px" type="email" name="email" placeholder="Email" required=""><br>
-                <textarea style="margin:3px;width:200px" name="message" placeholder="Message" required=""></textarea><br>
+          <form class="notify-form" action="https://formrelay.notify.ma/mailer/{{ page.notify_email }}/" method="POST">
+                <input type="text" name="fullname" placeholder="Name" required=""><br>
+                <input type="email" name="email" placeholder="Email" required=""><br>
+                <textarea name="message" placeholder="Message" required=""></textarea><br>
                 <input class="form-btn" type="submit" value="Send">
             </form>
       {% endif %}
