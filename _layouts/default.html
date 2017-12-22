@@ -24,7 +24,15 @@
 
     <section class="main-content">
       {{ content }}
-
+      {% if page.notify_email %}
+      <h3>Contact us</h3>
+          <form action="https://formrelay.notify.ma/mailer/{{ page.notify_email }}/" method="POST">
+                <input style="margin:3px;width:200px" type="text" name="fullname" placeholder="Name" required=""><br>
+                <input style="margin:3px;width:200px" type="email" name="email" placeholder="Email" required=""><br>
+                <textarea style="margin:3px;width:200px" name="message" placeholder="Message" required=""></textarea><br>
+                <input type="submit" value="Send">
+            </form>
+      {% endif %}
       <footer class="site-footer">
         {% if site.github.is_project_page %}
           <span class="site-footer-owner"><a href="{{ site.github.repository_url }}">{{ site.github.repository_name }}</a> is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>.</span>
