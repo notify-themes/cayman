@@ -42,6 +42,11 @@ a {
   }
 }
 .notify-form {
+input, textarea {
+    width: 100%;
+    margin-bottom: 4px;
+    color: green;
+}
     button {
      display: inline-block;
      margin-bottom: 1rem;
@@ -52,6 +57,7 @@ a {
   border-width: 1px;
   border-radius: 0.3rem;
   transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+      
   &:hover {
     color: rgba(95, 108, 102, 0.8);
     text-decoration: none;
